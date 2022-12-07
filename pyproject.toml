@@ -1,6 +1,49 @@
 [build-system]
 requires = [
-    "setuptools>=42",
+    "setuptools",
     "wheel",
 ]
 build-backend = "setuptools.build_meta"
+
+[project]
+name = "khl.py"
+version = "0.3.11"
+description = "Python SDK for kaiheila.cn API"
+readme = "README.md"
+requires-python = ">=3.6"
+license = { file = "LICENSE" }
+authors = [
+    { name = "TWT233", email = "TWT2333@outlook.com" },
+]
+keywords = [
+    "python3",
+    "aiohttp",
+    "bot",
+    "kaiheila",
+    "kook",
+]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+    "aiohttp",
+    "pycryptodomex",
+    "apscheduler",
+]
+
+[project.urls]
+homepage = "https://github.com/TWT233/khl.py"
+repository = "https://github.com/TWT233/khl.py"
+bug-tracker = "https://github.com/TWT233/khl.py/issues"
+tutorial = "https://github.com/TWT233/khl.py/tree/main/example"
+
+[project.optional-dependencies]
+dev = [
+    "yapf",
+    "pylint",
+]
+
+[tool.setuptools.packages.find]
+exclude = ["example*"]
